@@ -1,18 +1,19 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
-    alias(libs.plugins.kotlin.compose)
+    // The kotlin.compose plugin is no longer needed here
+    // alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.kotlin.serialization)
 }
 
 android {
     namespace = "com.example.mydatasiswa"
-    compileSdk = 36
+    compileSdk = 34 // Downgraded to a stable version
 
     defaultConfig {
         applicationId = "com.example.mydatasiswa"
         minSdk = 24
-        targetSdk = 36
+        targetSdk = 34 // Downgraded to a stable version
         versionCode = 1
         versionName = "1.0"
 
@@ -37,6 +38,10 @@ android {
     }
     buildFeatures {
         compose = true
+    }
+    // Explicitly set the Compose Compiler version for stability
+    composeOptions {
+        kotlinCompilerExtensionVersion = libs.versions.kotlinCompilerExtension.get()
     }
 }
 

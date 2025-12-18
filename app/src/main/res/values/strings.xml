@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">MyDataSiswa</string>
+    <string name="entry_siswa">Entry Siswa</string>
+    <string name="btn_submit">Submit</string>
+    <string name="nama">Nama</string>
+    <string name="alamat">Alamat</string>
+    <string name="telpon">Telepon</string>
+    <string name="back">Back</string>
+    <string name="no_item_description">No items found, please add new data.</string>
 </resources>
