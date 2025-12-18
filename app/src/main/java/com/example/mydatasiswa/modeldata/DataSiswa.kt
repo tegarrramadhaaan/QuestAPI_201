@@ -21,9 +21,5 @@ data class UIStateSiswa(
     val isEntryValid: Boolean = false
 )
 
-fun DetailSiswa.toSiswa(): DataSiswa = DataSiswa(
-    id = 0, // ID diabaikan oleh server saat membuat data baru
-    nama = nama,
-    alamat = alamat,
-    telpon = telpon
+
 )
